@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Frankenstein</title>
+                <author corresp="#MWS">Mary Wollstonecraft Shelley</author>
+                <editor corresp="#PBS">Percy Bysshe Shelley</editor>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>University of Antwerp</publisher>
+                <date>8 December 2023</date>
+                <availability>
+                    <licence target="https://iiif.bodleian.ox.ac.uk/iiif/mirador/53fd0f29-d482-46e1-aa9d-37829b49987d">
+                        <p>Original text by Mary Shelley (1816). Public domain, under a CC-BY-NC 4.0 licence.</p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    Draft of Frankenstein, [August or September] – [?December] 1816. | Bodleian MS. 
+                    Abinger c.56 (formerly designated Dep. 477/1) consists of 62 leaves originally 
+                    bound in Notebook A, one of two now disbound notebooks in which Mary W. Shelley 
+                    (MWS) drafted the two-volume version of Frankenstein. The draft in c.56 runs 
+                    from the beginning to the end of Volume I, concluding just as the Creature is 
+                    about to begin his tale to Victor.
+                </p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="page" n="23v" rend="verso">
+                <pb facs="#p23v"/>
+                <metamark function="pagenumber"><num><hi rend="circled">80</hi></num></metamark>
+                <p>
+                    the doors being opened <unclear reason="ink blot">I</unclear> perceived Henry<lb/>
+                    Clerval, who on <del type="crossedOut" hand="#MWS" rend="blackink"><unclear/></del>seeing me instantly<lb/>
+                    sprung out.<lb/>
+                </p>
+                <p>
+                    <hi rend="indented">"My dear Frankenstein," exclaimed he.</hi><lb/>
+                    "How glad I am to see you; how<lb/>
+                    "fortunate <add place="supralinear" hand="#PBS" rend="blackink">that</add> you should be here at<lb/>
+                    "the <add place="infralinear" hand="#PBS" rend="blackink"><metamark function="insert">^</metamark></add><add place="supralinear" hand="#PBS" rend="blackink">very</add> moment of my alighting."<lb/>
+                </p>
+                <p>
+                    Nothing could equal my delight<lb/>
+                    on <del type="crossedOut" hand="#MWS" rend="blackink">see</del><choice><sic>seing</sic><corr>seeing</corr></choice> Clerval: his presence<lb/>
+                    brought back to my thoughts my fa-<lb/>
+                    ther, Elizabeth and all those scenes<lb/>
+                    of home so dear to my recollection.<lb/>
+                    I grasped his hand, and in a moment<lb/>
+                    forgot my horror and misfortune<lb/>
+                    I felt <metamark xml:id="mark1">^</metamark><add target="#mark1" place="supralinear" hand="#PBS" rend="blackink">suddenly, and</add> for the first time <del type="crossedOut" hand="#PBS" rend="blackink">for</del><add place="supralinear" hand="#PBS" rend="blackink">during</add> for<lb/>
+                    many months <add place="inline" hand="#PBS" rend="blackink">,</add> calm and serene<lb/>
+                    joy. I welcomed my friend therefore<lb/>
+                    in the most cordial manner &amp;<lb/>
+                    we walked towards my colledge.<lb/>
+                    Clerval <del type="crossedOut" hand="#MWS" rend="blackink">ran on</del> <del type="crossedOut" hand="#MWS" rend="blackink">talked</del> continued<lb/>
+                    talking for some time about <del type="crossedOut" hand="#MWS" rend="blackink">my</del><add place="supralinear" hand="#PBS" rend="blackink">our mutual</add><lb/>
+                    friends and his <add place="supralinear" hand="#PBS" rend="blackink">own</add> good fortune in<lb/>
+                    being allowed to come Ingolstadt.<lb/>
+                    <hi rend="indented">You may believe," said he,<del type="crossedOut" hand="#MWS" rend="blackink">that</del></hi><lb/>
+                    "it was not with<del type="crossedOut" hand="#MWS" rend="blackink">out</del> considerable<lb/>
+                    "trouble that I persuaded my<lb/>
+                    "father that it is not absolutely<lb/>
+                    "necessary for a merchant to<lb/>
+                    "know nothing except bookeeping<lb/>
+                </p>
+            </div>                    
+        </body>
+    </text>
+</TEI>
