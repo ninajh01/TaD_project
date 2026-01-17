@@ -46,35 +46,44 @@
     <div class="container-fluid">
       <h1>Mary Wollstonecraft Shelley - <i>Frankenstein</i></h1>
       
-      <div class="row">
-        <div class="col-5">   
-            <p>Welcome to the mini digital edition of Mary Shelley's <i>Frankenstein</i>. Made by <a href="https://www.linkedin.com/in/nina-hoogendoorn-0bb0a9269" target="_blank">Nina Hoogendoorn</a>, as a project for Text as Data II, taught at the University of Antwerp.</p>
-          <ul>
-            <img src="mary-shelley.jpg" alt="Mary Shelley"> <!--add styling in css-->
-            <img src="percy-shelley.jpg" alt="Percy Shelley">
-            <li>This digital edition contains several encoded pages of Frankenstein. Click the links below or use the drop-down button on the top of the page.</li>
-              <ul>
-                <li><a href="21r.html">Page 75</a></li>
-                <li><a href="21v.html">Page 76</a></li>
-                <li><a href="22r.html">Page 77</a></li>
-                <li><a href="22v.html">Page 78</a></li>
-                <li><a href="23r.html">Page 79</a></li>
-                <li><a href="23v.html">Page 80</a></li>
-                <li><a href="24r.html">Page 81</a></li>
-                <li><a href="24v.html">Page 82</a></li>
-                <li><a href="25r.html">Page 83</a></li>
-                <li><a href="25v.html">Page 84</a></li>
-              </ul>
-            </li>
+      <div class="row" style="position: relative;">
+        <figure class="portrait-mary">
+          <img src="mary-shelley.jpg" alt="Mary Shelley" class="right-align">
+          <figcaption>Mary Shelley</figcaption>
+        </figure>
+        <figure class="portrait-percy">
+          <img src="percy-shelley.jpg" alt="Percy Shelley" class="right-align">
+          <figcaption>Percy Shelley</figcaption>
+        </figure>
+        <div class="col-5"> 
+          <p>Welcome to the mini digital edition of Mary Shelley's <i>Frankenstein</i>. Made by <a href="https://www.linkedin.com/in/nina-hoogendoorn-0bb0a9269" target="_blank">Nina Hoogendoorn</a>, as a project for Text as Data II, taught at the University of Antwerp.</p>
+          <p>This digital edition contains several encoded pages of Frankenstein. Click on a link below or use the drop-down button on the top of the page.</p>
+    
+          <ul class="page-list">
+            <li><a href="21r.html">Page 75</a></li>
+            <li><a href="21v.html">Page 76</a></li>
+            <li><a href="22r.html">Page 77</a></li>
+            <li><a href="22v.html">Page 78</a></li>
+            <li><a href="23r.html">Page 79</a></li>
+            <li><a href="23v.html">Page 80</a></li>
+            <li><a href="24r.html">Page 81</a></li>
+            <li><a href="24v.html">Page 82</a></li>
+            <li><a href="25r.html">Page 83</a></li>
+            <li><a href="25v.html">Page 84</a></li>
+          </ul>
+          
+          <lb></lb>
+          <p>Some handy links:</p>
+          <ul class="page-list">
             <li>Visit the <a href="https://www.bodleian.ox.ac.uk/home" target="_blank">Bodleian library.</a></li>
             <li>Visit the <a href="http://shelleygodwinarchive.org/" target="_blank">Shelley Godwin Archive.</a></li>
             <li>Visit the <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC licensing page.</a></li>
             <li>Visit the <a href="https://bdmpmanual.uantwerpen.be/" target="_blank">encoding manual.</a></li>
           </ul>
         </div>
-        <div class="col-7" id="text"></div>
+        <div class="col-7" id="text"></div>    
+          </div> 
       </div>
-    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
