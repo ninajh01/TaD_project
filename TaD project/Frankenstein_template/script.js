@@ -125,7 +125,6 @@ function documentLoader() {
   var deletions = document.getElementsByClassName('del');
   var deletionsArray = Array.from(deletions);
 
-  // Use deletionsArray, not deletions.Array
   deletionsArray.forEach(el => {
     if (el.style.display === 'none') {
       el.style.display = 'inline';
@@ -134,4 +133,19 @@ function documentLoader() {
     }
   });
 }
+
+  function wrapCaretSymbols() {
+    const textDiv = document.getElementById("text");
+    if (textDiv) {
+        textDiv.innerHTML = textDiv.innerHTML.replace(/\^/g, '<span class="metamark">^</span>');
+    }
+}
+
+  function toggleMetamarks() {
+    wrapCaretSymbols();
+    
+    document.body.classList.toggle("hide-marks");
+    console.log("Metamarks toggled");
+}
+
 // EXTRA: write a function that will display the text as a reading text by clicking on a button or another dropdown list, meaning that all the deletions are removed and that the additions are shown inline (not in superscript)

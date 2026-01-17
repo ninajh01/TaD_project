@@ -62,7 +62,7 @@
                     a <del type="crossedOut" hand="#MWS" rend="blackink">feew</del> few moments of forgetfullness.<lb/> 
                     But it was in vain; I slept indeed but<lb/>
                     I was disturbed by the wildest dreams–<lb/>
-                    I saw Elizabeth<add place="infralinear" hand="#MWS" rend="blackink"><metamark>^</metamark></add><note>'^' is used as metamark, close visual resemblance</note><add place="supralinear" hand="#MWS" rend="blackink">in the bloom of health</add> walking in the streets of<lb/>
+                    I saw Elizabeth <metamark xml:id="mark2" function="insert">^</metamark><add target="#mark2" place="supralinear" hand="#MWS" rend="blackink">in the bloom of health</add> walking in the streets of<lb/>
                     Ingolstadt; delighted &amp; surprised I embraced<lb/>
                     her but as I imprinted the first kiss<lb/>
                     on her lips they became lurid with<lb/>

@@ -51,6 +51,10 @@ span.pageNumber {
     vertical-align: middle;
 }
 
+*[rend="underline"] {
+    text-decoration: underline !important;
+}
+
 p {
     text-indent: 10px;
 }
@@ -90,4 +94,16 @@ p {
 }
 .button-class.active {
     color: #34197c;
+}
+
+body.hide-marks metamark, 
+body.hide-marks [local-name='metamark'],
+body.hide-marks tei-metamark {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+body.hide-marks .metamark {
+    display: none !important;
 }

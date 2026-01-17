@@ -44,7 +44,7 @@
                     <hi rend="indented">"My dear Frankenstein," exclaimed he.</hi><lb/>
                     "How glad I am to see you; how<lb/>
                     "fortunate <add place="supralinear" hand="#PBS" rend="blackink">that</add> you should be here at<lb/>
-                    "the <add place="infralinear" hand="#PBS" rend="blackink"><metamark function="insert">^</metamark></add><add place="supralinear" hand="#PBS" rend="blackink">very</add> moment of my alighting."<lb/>
+                    "the <metamark xml:id="mark1">^</metamark><add target="#mark1" place="supralinear" hand="#PBS" rend="blackink">very</add> moment of my alighting."<lb/>
                 </p>
                 <p>
                     Nothing could equal my delight<lb/>
@@ -54,7 +54,7 @@
                     of home so dear to my recollection.<lb/>
                     I grasped his hand, and in a moment<lb/>
                     forgot my horror and misfortune<lb/>
-                    I felt <metamark xml:id="mark1">^</metamark><add target="#mark1" place="supralinear" hand="#PBS" rend="blackink">suddenly, and</add> for the first time <del type="crossedOut" hand="#PBS" rend="blackink">for</del><add place="supralinear" hand="#PBS" rend="blackink">during</add> for<lb/>
+                    I felt <metamark xml:id="mark2">^</metamark><add target="#mark2" place="supralinear" hand="#PBS" rend="blackink">suddenly, and</add> for the first time <del type="crossedOut" hand="#PBS" rend="blackink">for</del><add place="supralinear" hand="#PBS" rend="blackink">during</add> for<lb/>
                     many months <add place="inline" hand="#PBS" rend="blackink">,</add> calm and serene<lb/>
                     joy. I welcomed my friend therefore<lb/>
                     in the most cordial manner &amp;<lb/>
