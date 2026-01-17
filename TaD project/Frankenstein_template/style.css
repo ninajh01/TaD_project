@@ -32,4 +32,16 @@ p {
     display: none !important;
 }
 
-
+.container-fluid {
+    text-align: center;
+}
+.button-class {
+    display: inline-block;
+}
+.hidden {
+    visibility: hidden;
+    pointer-events: none;
+}
+.button-class.active {
+    color: #34197c;
+}

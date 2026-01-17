@@ -98,21 +98,40 @@ function documentLoader() {
   statsLoader();
   // Event listener for sel1 change
   function selectHand(event) {
-  var visible_mary = document.getElementsByClassName('#MWS');
-  var visible_percy = document.getElementsByClassName('#PBS');
-  // Convert the HTMLCollection to an array for forEach compatibility
-  var MaryArray = Array.from(visible_mary);
-  var PercyArray = Array.from(visible_percy);
-    if (event.target.value == 'both') {
-    //write an forEach() method that shows all the text written and modified by both hand (in black?). The forEach() method of Array instances executes a provided function once for each array element.
-    MaryArray.forEach
-    } else if (event.target.value == 'Mary') {
-     //write an forEach() method that shows all the text written and modified by Mary in a different color (or highlight it) and the text by Percy in black. 
-     
-    } else {
-     //write an forEach() method that shows all the text written and modified by Percy in a different color (or highlight it) and the text by Mary in black.
+    // Note: Removed the '#' because getElementsByClassName only takes the class name string
+    var visible_mary = document.getElementsByClassName('#MWS'); 
+    var visible_percy = document.getElementsByClassName('#PBS');
     
+    // Convert the HTMLCollection to an array for forEach compatibility
+    var MaryArray = Array.from(visible_mary);
+    var PercyArray = Array.from(visible_percy);
+
+    if (event.target.value == 'both') {
+      // Your forEach implementation is now correctly applied to both arrays
+      MaryArray.forEach(el => el.style.color = 'black');
+      PercyArray.forEach(el => el.style.color = 'black');
+    } else if (event.target.value == 'Mary') {
+      // Highlight Mary and reset Percy
+      MaryArray.forEach(el => el.style.color = '#cb416b'); 
+      PercyArray.forEach(el => el.style.color = 'black');
+    } else if (event.target.value == 'Percy') {
+      // Highlight Percy and reset Mary
+      PercyArray.forEach(el => el.style.color = 'blue'); 
+      MaryArray.forEach(el => el.style.color = 'black');
     }
   }
 // write another function that will toggle the display of the deletions by clicking on a button
+  function toggleDels() {
+  var deletions = document.getElementsByClassName('del');
+  var deletionsArray = Array.from(deletions);
+
+  // Use deletionsArray, not deletions.Array
+  deletionsArray.forEach(el => {
+    if (el.style.display === 'none') {
+      el.style.display = 'inline';
+    } else {
+      el.style.display = 'none';
+    }
+  });
+}
 // EXTRA: write a function that will display the text as a reading text by clicking on a button or another dropdown list, meaning that all the deletions are removed and that the additions are shown inline (not in superscript)

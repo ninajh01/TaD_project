@@ -58,13 +58,12 @@
     
     
     <xsl:template match="tei:del">
-        <del>
-            <xsl:attribute name="class">
-                <xsl:value-of select="@hand"/>
-            </xsl:attribute>
-            <xsl:apply-templates/>
-        </del>
-    </xsl:template>
+    <del>
+        <xsl:attribute name="class">
+            <xsl:text>del </xsl:text> <xsl:value-of select="@hand"/> </xsl:attribute>
+        <xsl:apply-templates/>
+    </del>
+</xsl:template>
     
     <!-- all the supralinear additions are given in a span with the class supraAdd, make sure to put this class in superscript in the CSS file, -->
     <xsl:template match="tei:add[@place = 'supralinear']">
