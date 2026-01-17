@@ -88,8 +88,14 @@
     <span style="text-decoration: underline;"><xsl:apply-templates/></span>
 </xsl:template>
 
-<xsl:template match="tei:hi[@rend = 'circled']">
-    <span style="border: 1px solid black; border-radius: 50%; padding: 4px;">
+<xsl:template match="tei:hi[@rend='circled']">
+    <span class="pageNumber">
+        <xsl:apply-templates/>
+    </span>
+</xsl:template>
+
+<xsl:template match="tei:hi[@rend='circled']">
+    <span class="pageNumber">
         <xsl:apply-templates/>
     </span>
 </xsl:template>

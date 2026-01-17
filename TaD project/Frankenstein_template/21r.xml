@@ -32,10 +32,10 @@
   <text>
       <body>
          <div type="page" n="21r" rend="recto">
-            <pb facs="#p21r"/>
             <head>
-               Chapter 7<hi rend="sup"><hi rend="u">th</hi></hi><metamark function="pagenumber"><num><hi rend="circled">75</hi></num></metamark>
+               Chapter 7<hi rend="sup"><hi rend="u">th </hi></hi>
             </head>
+            <hi rend="circled">75</hi>
             <p>
                It was on a dreary night of November<lb/>
                that I beheld <del type="crossedOut" hand="#PBS" rend="blackink"><add place="supralinear" hand="#PBS" rend="blackink">the frame on whic</add></del> my man comple<del type="overwritten" hand="#PBS" rend="blackink">at</del><add place="overwritten" hand="#PBS" rend="blackink">te</add>ed<del type="overwritten" hand="#PBS" rend="blackink">.</del><add place="overwritten" hand="#PBS" rend="blackink">,</add> <del type="crossedOut" hand="#PBS" rend="blackink">And</del><lb/>

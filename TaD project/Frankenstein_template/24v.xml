@@ -34,8 +34,8 @@
     <text>
         <body>
             <div type="page" n="24v" rend="verso">
-                <pb facs="#p24v"/>
-                <metamark function="pagenumber"><num><hi rend="circled">82</hi></num></metamark>
+                <pb/>
+                <hi rend="circled">82</hi>
                 <p>
                     "see<add place="inline" hand="#PBS" rend="blackink">;</add> but I hope<add place="inline" hand="#PBS" rend="blackink">,</add> I sincerely hope all those<lb/>
                     "occupations are at an end—I am free<lb/>

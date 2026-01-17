@@ -33,8 +33,8 @@
     <text>
         <body>
             <div type="page" n="22r" rend="recto">
-                <pb facs="#p22r"/>
-                <metamark function="pagenumber"><num><hi rend="circled">77</hi></num></metamark>
+                <pb/>
+                <hi rend="circled">77</hi>
                 <p>
                     to change and I thought that I held <lb/>
                     the corpse of my dead mother in my arms <del type="overwritten" hand="#MWS" rend="blackink">,</del><add place="inline" hand="#PBS" rend="blackink">:</add><lb/>

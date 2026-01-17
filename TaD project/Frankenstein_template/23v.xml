@@ -33,8 +33,8 @@
     <text>
         <body>
             <div type="page" n="23v" rend="verso">
-                <pb facs="#p23v"/>
-                <metamark function="pagenumber"><num><hi rend="circled">80</hi></num></metamark>
+                <pb/>
+                <hi rend="circled">80</hi>
                 <p>
                     the doors being opened <unclear reason="ink blot">I</unclear> perceived Henry<lb/>
                     Clerval, who on <del type="crossedOut" hand="#MWS" rend="blackink"><unclear/></del>seeing me instantly<lb/>

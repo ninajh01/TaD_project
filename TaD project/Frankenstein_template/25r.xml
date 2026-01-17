@@ -33,9 +33,9 @@
     </teiHeader>
     <text>
         <body>
-            <div type="page" n="25r" rend="recto">
-                <pb facs="#p25r"/>
-                <metamark function="pagenumber"><num><hi rend="circled">83</hi></num></metamark>
+            <div>
+                <pb/>
+                <hi rend="circled">83</hi>
                 <p>
                     believe that so great a good fortune<lb/>
                     could have befallen me; but when<lb/>

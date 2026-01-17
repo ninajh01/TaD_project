@@ -34,8 +34,8 @@
     <text>
         <body>
             <div type="page" n="24r" rend="recto">
-            <pb facs="#p24r"/>
-                <metamark function="pagenumber"><num><hi rend="circled">81</hi></num></metamark>
+                <pb/>
+                <hi rend="circled">81</hi>
                 <p>
                     "and Indeed I believe I left him<lb/>
                     "incredulous to the last for his con<lb/>
