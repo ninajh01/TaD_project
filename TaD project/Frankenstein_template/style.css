@@ -1,21 +1,37 @@
 body {
-    background-color: white;
+    background-color: #efe2d1;
+    font-family: Garamond, serif;
+    font-size: 17px;
 }
 .starter-template {
   padding: 40px 15px;
   text-align: center;
 }
 
+.main-title {
+    font-family: Garamond, serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    animation: float 4s ease-in-out infinite;
+    display: block;
+    margin-top: 30px;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
 .portrait-mary, .portrait-percy {
-    position: absolute;
-    right: 400px;
-    width: 100px;
+    width: 100%;
     text-align: center;
-    margin: 0;
+    margin: 30px;
 }
 
 .portrait-mary img, .portrait-percy img {
-    width: 300%;
+    width: 100%;
+    max-width: 250px;
     height: auto;
 }
 
@@ -30,6 +46,18 @@ figcaption {
 
 .portrait-percy {
     top: 450px; 
+}
+
+#sel-hand {
+    width: auto;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#sel-hand, .btn {
+    vertical-align: middle;
+    margin-top: 0 !important;
+    margin-bottom: 5px;
 }
 
 span.supraAdd {
@@ -83,7 +111,7 @@ p {
 }
 
 .container-fluid {
-    text-align: center;
+    text-align: left;
 }
 .button-class {
     display: inline-block;
