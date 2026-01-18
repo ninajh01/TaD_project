@@ -23,6 +23,22 @@ body {
     100% { transform: translateY(0px); }
 }
 
+.navbar .dropdown-menu {
+    background-color: #b36057 !important;
+    border: 1px black;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5)
+}
+
+.navbar .dropdown-item:hover {
+    background-color: #e0d1bc !important; 
+    color: #720808 !important;
+}
+
+.navbar.bg-light {
+    background-color: #953025 !important; 
+    border-bottom: 1px solid #4a3b2a;
+}
+
 .portrait-mary, .portrait-percy {
     width: 100%;
     text-align: center;
@@ -38,14 +54,6 @@ body {
 figcaption {
     font-style: italic;
     margin-top: 5px;
-}
-
-.portrait-mary {
-    top: 20px; 
-}
-
-.portrait-percy {
-    top: 450px; 
 }
 
 #sel-hand {
@@ -89,6 +97,19 @@ p {
 
 .page-list {
     list-style-type: none;
+    padding-left: 10px;
+}
+
+.page-list li {
+    display: block;
+    position: relative;
+}
+
+.page-list li::before {
+    content: "❧";
+    position: static;
+    margin-right: 12px;
+    flex-shrink: 0;
 }
 
 .row {
@@ -116,6 +137,7 @@ p {
 .button-class {
     display: inline-block;
 }
+
 .hidden {
     visibility: hidden;
     pointer-events: none;
