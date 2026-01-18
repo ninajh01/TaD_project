@@ -98,28 +98,21 @@ function documentLoader() {
   statsLoader();
   // Event listener for sel1 change
   function selectHand(event) {
-    // Note: Removed the '#' because getElementsByClassName only takes the class name string
-    var visible_mary = document.getElementsByClassName('#MWS'); 
-    var visible_percy = document.getElementsByClassName('#PBS');
-    
-    // Convert the HTMLCollection to an array for forEach compatibility
-    var MaryArray = Array.from(visible_mary);
-    var PercyArray = Array.from(visible_percy);
-
-    if (event.target.value == 'both') {
-      // Your forEach implementation is now correctly applied to both arrays
-      MaryArray.forEach(el => el.style.color = 'black');
-      PercyArray.forEach(el => el.style.color = 'black');
-    } else if (event.target.value == 'Mary') {
-      // Highlight Mary and reset Percy
-      MaryArray.forEach(el => el.style.color = '#cb416b'); 
-      PercyArray.forEach(el => el.style.color = 'black');
-    } else if (event.target.value == 'Percy') {
-      // Highlight Percy and reset Mary
-      PercyArray.forEach(el => el.style.color = 'blue'); 
-      MaryArray.forEach(el => el.style.color = 'black');
-    }
+  // Use querySelectorAll to specifically target the classes with the '#' character
+  var visible_mary = document.querySelectorAll('.\\#MWS'); 
+  var visible_percy = document.querySelectorAll('.\\#PBS');
+  
+  if (event.target.value == 'both') {
+    visible_mary.forEach(el => el.style.color = 'black');
+    visible_percy.forEach(el => el.style.color = 'black');
+  } else if (event.target.value == 'Mary') {
+    visible_mary.forEach(el => el.style.color = '#cb416b'); 
+    visible_percy.forEach(el => el.style.color = 'black');
+  } else if (event.target.value == 'Percy') {
+    visible_percy.forEach(el => el.style.color = 'blue'); 
+    visible_mary.forEach(el => el.style.color = 'black');
   }
+}
 // write another function that will toggle the display of the deletions by clicking on a button
   function toggleDels() {
   var deletions = document.getElementsByClassName('del');

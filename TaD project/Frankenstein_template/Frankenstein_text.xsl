@@ -42,7 +42,7 @@
     </xsl:template>
     
     <xsl:template match="tei:div">
-        <div class="#MWS"><xsl:apply-templates/></div>
+        <div><xsl:apply-templates/></div>
     </xsl:template>
     
     <xsl:template match="tei:p">
@@ -68,6 +68,10 @@
     <!-- all the supralinear additions are given in a span with the class supraAdd, make sure to put this class in superscript in the CSS file, -->
     <xsl:template match="tei:add[@place = 'supralinear']">
         <span class="supraAdd">
+            <xsl:attribute name="class">
+                <xsl:text>supraAdd </xsl:text>
+                <xsl:value-of select="@hand"/>
+            </xsl:attribute>
             <xsl:apply-templates/>
         </span>
     </xsl:template>
@@ -102,7 +106,10 @@
 
 <xsl:template match="tei:add[@place = 'overwritten']">
     <span class="overwritten">
+        <xsl:attribute name="class">
+            <xsl:text>overwritten </xsl:text>
+            <xsl:value-of select="@hand"/>
+        </xsl:attribute>
         <xsl:apply-templates/>
     </span>
 </xsl:template>
-</xsl:stylesheet>
