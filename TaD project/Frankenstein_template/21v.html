@@ -1,93 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8".>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" .>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <script src="https://unpkg.com/mirador@latest/dist/mirador.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
 
-    <title>Frankenstein Edition</title>
-    <link href="style.css" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Frankenstein</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <a class="nav-link" href="index.html">Home</a>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Pages
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="21r.html">Page 75</a>
-              <a class="dropdown-item" href="21v.html">Page 76</a>
-              <a class="dropdown-item" href="22r.html">Page 77</a>
-              <a class="dropdown-item" href="22v.html">Page 78</a>
-              <a class="dropdown-item" href="23r.html">Page 79</a>
-              <a class="dropdown-item" href="23v.html">Page 80</a>
-              <a class="dropdown-item" href="24r.html">Page 81</a>
-              <a class="dropdown-item" href="24v.html">Page 82</a>
-              <a class="dropdown-item" href="25r.html">Page 83</a>
-              <a class="dropdown-item" href="25v.html">Page 84</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="container-fluid text-center">
-      <a href="21r.html" class="button-class">Previous page</a>
-      <a href="21r.html" class="button-class">75</a>
-      <a href="21v.html" class="button-class active">76</a>
-      <a href="22r.html" class="button-class">77</a>
-      <a href="22v.html" class="button-class">78</a>
-      <a href="23r.html" class="button-class">79</a>
-      <a href="23v.html" class="button-class">80</a>
-      <a href="24r.html" class="button-class">81</a>
-      <a href="24v.html" class="button-class">82</a>
-      <a href="25r.html" class="button-class">83</a>
-      <a href="25v.html" class="button-class">84</a>
-      <a href="22r.html" class="button-class">Next page</a>
-     </div> 
-      <h1>Frankenstein Volume I Draft in Chapter Sequence</h1>
-      <span style="visibility:hidden" id='page'>45</span>
-      <h2 id="folio" style="display: none;">21v</h2>
-      <h2 class="display-title">Page 76</h2> <!-- you can style this h2 element differently, but you should keep the id="folio" and the elements value *unchanged* -->
-      <div id="stats"></div>
-      <div class="form-group">
-        <select class="form-control" id="sel-hand" onChange="selectHand(event)">
-          <option value="both">Both Hands</option>
-          <option value="Mary">Mary Shelley's Hand Highlighted</option>
-          <option value="Percy">Percy Shelley's Hand Highlighted</option>
-        </select>
-        <button type="button" id="reading-toggle" class="btn btn-info mt-2" onclick="toggleReadingText()">
-          View reading text
-        </button>
-        <button type="button" id="deleting-toggle" class="btn btn-info mt-2" onclick="toggleDels()">
-          Show/Hide Deletions
-        </button>
-        <button type="button" id="metamark-toggle" class="btn btn-secondary mt-2" onclick="toggleMetamarks()">
-          Show/Hide Metamarks
-        </button>
-      </div>
-      <div class="row">
-        <div class="col-5">   
-            <div id="my-mirador"></div>
-        </div>
-        <div class="col-7" id="text"></div>
-      </div>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://unpkg.com/mirador@latest/dist/mirador.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+
+  <title>Frankenstein Edition</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Frankenstein</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Pages
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="21r.html">Page 75</a>
+            <a class="dropdown-item" href="21v.html">Page 76</a>
+            <a class="dropdown-item" href="22r.html">Page 77</a>
+            <a class="dropdown-item" href="22v.html">Page 78</a>
+            <a class="dropdown-item" href="23r.html">Page 79</a>
+            <a class="dropdown-item" href="23v.html">Page 80</a>
+            <a class="dropdown-item" href="24r.html">Page 81</a>
+            <a class="dropdown-item" href="24v.html">Page 82</a>
+            <a class="dropdown-item" href="25r.html">Page 83</a>
+            <a class="dropdown-item" href="25v.html">Page 84</a>
+          </div>
+        </li>
+      </ul>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-  </body>
+  </nav>
+  <div class="container-fluid text-center">
+    <a href="21r.html" class="button-class">Previous page</a>
+    <a href="21r.html" class="button-class">75</a>
+    <a href="21v.html" class="button-class active">76</a>
+    <a href="22r.html" class="button-class">77</a>
+    <a href="22v.html" class="button-class">78</a>
+    <a href="23r.html" class="button-class">79</a>
+    <a href="23v.html" class="button-class">80</a>
+    <a href="24r.html" class="button-class">81</a>
+    <a href="24v.html" class="button-class">82</a>
+    <a href="25r.html" class="button-class">83</a>
+    <a href="25v.html" class="button-class">84</a>
+    <a href="22r.html" class="button-class">Next page</a>
+  </div>
+  <h1>Frankenstein Volume I Draft in Chapter Sequence</h1>
+  <span style="visibility:hidden" id='page'>45</span>
+  <h2 id="folio" style="display: none;">21v</h2>
+  <h2 class="display-title">Page 76</h2>
+  <div id="stats"></div>
+  <div class="form-group">
+    <select class="form-control" id="sel-hand" onChange="selectHand(event)">
+      <option value="both">Both Hands</option>
+      <option value="Mary">Mary Shelley's Hand Highlighted</option>
+      <option value="Percy">Percy Shelley's Hand Highlighted</option>
+    </select>
+    <button type="button" id="reading-toggle" class="btn btn-info mt-2" onclick="toggleReadingText()">
+      View reading text
+    </button>
+    <button type="button" id="deleting-toggle" class="btn btn-info mt-2" onclick="toggleDels()">
+      Hide Deletions
+    </button>
+    <button type="button" id="metamark-toggle" class="btn btn-secondary mt-2" onclick="toggleMetamarks()">
+      Hide Metamarks
+    </button>
+  </div>
+  <div class="row">
+    <div class="col-5">
+      <div id="my-mirador"></div>
+    </div>
+    <div class="col-7" id="text"></div>
+  </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>

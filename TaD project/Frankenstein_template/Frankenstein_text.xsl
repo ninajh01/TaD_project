@@ -98,12 +98,6 @@
     </span>
 </xsl:template>
 
-<xsl:template match="tei:hi[@rend='circled']">
-    <span class="pageNumber">
-        <xsl:apply-templates/>
-    </span>
-</xsl:template>
-
 <xsl:template match="tei:add[@place = 'overwritten']">
     <span class="overwritten">
         <xsl:attribute name="class">

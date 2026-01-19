@@ -46,10 +46,10 @@ var mirador = Mirador.viewer({
 // function to transform the text encoded in TEI with the xsl stylesheet "Frankenstein_text.xsl", this will apply the templates and output the text in the html <div id="text">
 function documentLoader() {
 
-    Promise.all([
-      fetch(folio_xml).then(response => response.text()),
-      fetch("Frankenstein_text.xsl").then(response => response.text())
-    ])
+  Promise.all([
+    fetch(folio_xml).then(response => response.text()),
+    fetch("Frankenstein_text.xsl").then(response => response.text())
+  ])
     .then(function ([xmlString, xslString]) {
       var parser = new DOMParser();
       var xml_doc = parser.parseFromString(xmlString, "text/xml");
@@ -66,15 +66,15 @@ function documentLoader() {
     .catch(function (error) {
       console.error("Error loading documents:", error);
     });
-  }
-  
-// function to transform the metadate encoded in teiHeader with the xsl stylesheet "Frankenstein_meta.xsl", this will apply the templates and output the text in the html <div id="stats">
-  function statsLoader() {
+}
 
-    Promise.all([
-      fetch(folio_xml).then(response => response.text()),
-      fetch("Frankenstein_meta.xsl").then(response => response.text())
-    ])
+// function to transform the metadate encoded in teiHeader with the xsl stylesheet "Frankenstein_meta.xsl", this will apply the templates and output the text in the html <div id="stats">
+function statsLoader() {
+
+  Promise.all([
+    fetch(folio_xml).then(response => response.text()),
+    fetch("Frankenstein_meta.xsl").then(response => response.text())
+  ])
     .then(function ([xmlString, xslString]) {
       var parser = new DOMParser();
       var xml_doc = parser.parseFromString(xmlString, "text/xml");
@@ -91,63 +91,80 @@ function documentLoader() {
     .catch(function (error) {
       console.error("Error loading documents:", error);
     });
-  }
+}
 
-  // Initial document load
-  documentLoader();
-  statsLoader();
-  // Event listener for sel1 change
-  function selectHand(event) {
+// Initial document load
+documentLoader();
+statsLoader();
+// Event listener for sel1 change
+function selectHand(event) {
   // Use querySelectorAll to specifically target the classes with the '#' character
-  var visible_mary = document.querySelectorAll('.\\#MWS'); 
-  var visible_percy = document.querySelectorAll('.\\#PBS');
-  
+  const visible_mary = document.querySelectorAll('.\\#MWS');
+  const visible_percy = document.querySelectorAll('.\\#PBS');
+
   if (event.target.value == 'both') {
     visible_mary.forEach(el => el.style.color = 'black');
     visible_percy.forEach(el => el.style.color = 'black');
   } else if (event.target.value == 'Mary') {
-    visible_mary.forEach(el => el.style.color = '#cb416b'); 
+    visible_mary.forEach(el => el.style.color = '#cb416b');
     visible_percy.forEach(el => el.style.color = 'black');
   } else if (event.target.value == 'Percy') {
-    visible_percy.forEach(el => el.style.color = 'blue'); 
+    visible_percy.forEach(el => el.style.color = 'blue');
     visible_mary.forEach(el => el.style.color = 'black');
   }
 }
 // write another function that will toggle the display of the deletions by clicking on a button
-  function toggleDels() {
-  var deletions = document.getElementsByClassName('del');
-  var deletionsArray = Array.from(deletions);
+function toggleDels() {
+  const btn = document.getElementById("deleting-toggle");
+  // store deletion elements in an array    
+  const deletions = [...document.getElementsByClassName('del')];
 
-  deletionsArray.forEach(el => {
+  deletions.forEach(el => {
     if (el.style.display === 'none') {
       el.style.display = 'inline';
     } else {
       el.style.display = 'none';
     }
   });
+  if (deletions[0].style.display === "none") {
+    btn.innerText = "Show deletions";
+  } else {
+    btn.innerText = "Hide deletions"
+  }
 }
 
-  function wrapCaretSymbols() {
-    const textDiv = document.getElementById("text");
-    if (textDiv) {
-        textDiv.innerHTML = textDiv.innerHTML.replace(/\^/g, '<span class="metamark">^</span>');
-    }
+// function for hiding and showing metamarks
+function wrapCaretSymbols() {
+  const textDiv = document.getElementById("text");
+  if (textDiv) {
+    textDiv.innerHTML = textDiv.innerHTML.replace(/\^/g, '<span class="metamark">^</span>');
+  }
 }
 
-  function toggleMetamarks() {
-    wrapCaretSymbols();
-    
-    document.body.classList.toggle("hide-marks");
-    console.log("Metamarks toggled");
-}
+function toggleMetamarks() {
+  wrapCaretSymbols();
 
-  function toggleReadingText() {
-    document.body.classList.toggle("reading-mode")
-    const btn = document.getElementById("reading-toggle")
-    if (document.body.classList.contains("reading-mode")) {
-      btn.innerText = "View manuscript";
+  document.body.classList.toggle("hide-marks");
+  const btn = document.getElementById("metamark-toggle")
+  if (btn) {
+    if (document.body.classList.contains("hide-marks")) {
+      btn.innerText = "Show metamarks";
     } else {
-        btn.innerText = "View reading text"
-    }  
+      btn.innerText = "Hide metamarks";
     }
-// EXTRA: write a function that will display the text as a reading text by clicking on a button or another dropdown list, meaning that all the deletions are removed and that the additions are shown inline (not in superscript)
+  }  
+}
+
+// function to display reading text
+function toggleReadingText() {
+  document.body.classList.toggle("reading-mode")
+  const btn = document.getElementById("reading-toggle")
+  if (document.body.classList.contains("reading-mode")) {
+    btn.innerText = "View manuscript";
+  } else {
+    btn.innerText = "View reading text"
+  }
+}
+
+
+

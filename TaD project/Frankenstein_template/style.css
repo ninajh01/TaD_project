@@ -3,49 +3,71 @@ body {
     font-family: Garamond, serif;
     font-size: 17px;
 }
+
 .starter-template {
-  padding: 40px 15px;
-  text-align: center;
+    padding: 40px 15px;
+    text-align: center;
 }
 
 .main-title {
     font-family: Garamond, serif;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     animation: float 4s ease-in-out infinite;
     display: block;
     margin-top: 30px;
 }
 
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 .navbar .dropdown-menu {
     background-color: #b36057 !important;
     border: 1px black;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.5)
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .dropdown-item {
+    transition: all ease-out 0.15s;
 }
 
 .navbar .dropdown-item:hover {
-    background-color: #e0d1bc !important; 
+    background-color: #e0d1bc !important;
     color: #720808 !important;
 }
 
 .navbar.bg-light {
-    background-color: #953025 !important; 
+    background-color: #570900c3 !important;
     border-bottom: 1px solid #4a3b2a;
+    backdrop-filter: blur(4px);
 }
 
-.portrait-mary, .portrait-percy {
+.portrait-mary,
+.portrait-percy {
     width: 100%;
     text-align: center;
     margin: 30px;
 }
 
-.portrait-mary img, .portrait-percy img {
+.portrait-mary img,
+.portrait-percy img {
     width: 100%;
     max-width: 250px;
     height: auto;
@@ -62,7 +84,8 @@ figcaption {
     margin-right: 10px;
 }
 
-#sel-hand, .btn {
+#sel-hand,
+.btn {
     vertical-align: middle;
     margin-top: 0 !important;
     margin-bottom: 5px;
@@ -76,14 +99,14 @@ span.supraAdd {
 
 span.pageNumber {
     display: inline-block;
-    width: 30px;           
-    height: 30px;       
-    line-height: 30px;  
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
     border: 1px solid black;
     border-radius: 50%;
     text-align: center;
     font-size: 16px;
-    background: white; 
+    background: white;
     vertical-align: middle;
 }
 
@@ -119,8 +142,8 @@ p {
 }
 
 .col {
-  margin-left: 10px;
-  margin-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .marginAdd {
@@ -134,6 +157,7 @@ p {
 .container-fluid {
     text-align: left;
 }
+
 .button-class {
     display: inline-block;
 }
@@ -142,11 +166,12 @@ p {
     visibility: hidden;
     pointer-events: none;
 }
+
 .button-class.active {
     color: #34197c;
 }
 
-body.hide-marks metamark, 
+body.hide-marks metamark,
 body.hide-marks [local-name='metamark'],
 body.hide-marks tei-metamark {
     display: none !important;
@@ -193,16 +218,16 @@ body.reading-mode .marginAdd {
 }
 
 #reading-toggle {
-    background-color:#740707d9;
-    border-color:black;
+    background-color: #740707d9;
+    border-color: black;
 }
 
 #deleting-toggle {
-    background-color:#af4646;
+    background-color: #af4646;
     border-color: black;
 }
 
 #metamark-toggle {
-    background-color:#c35858;
+    background-color: #b86565;
     border-color: black;
 }
