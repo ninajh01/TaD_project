@@ -157,3 +157,52 @@ body.hide-marks tei-metamark {
 body.hide-marks .metamark {
     display: none !important;
 }
+
+body.reading-mode .col-5 {
+    display: block !important;
+}
+
+body.reading-mode .col-7 {
+    flex: 0 0 58.333333% !important;
+    max-width: 58.333333% !important;
+    margin: auto !important;
+    padding: 40px !important;
+}
+
+body.reading-mode .row {
+    display: flex;
+    justify-content: flex-end;
+}
+
+body.reading-mode .col-3 {
+    display: none;
+}
+
+body.reading-mode .del {
+    display: none;
+}
+
+body.reading-mode .supraAdd {
+    vertical-align: baseline;
+    font-size: 100%;
+}
+
+body.reading-mode .marginAdd {
+    display: inline;
+    vertical-align: baseline;
+}
+
+#reading-toggle {
+    background-color:#740707d9;
+    border-color:black;
+}
+
+#deleting-toggle {
+    background-color:#af4646;
+    border-color: black;
+}
+
+#metamark-toggle {
+    background-color:#c35858;
+    border-color: black;
+}

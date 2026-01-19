@@ -69,11 +69,13 @@
           <option value="Mary">Mary Shelley's Hand Highlighted</option>
           <option value="Percy">Percy Shelley's Hand Highlighted</option>
         </select>
-
-        <button type="button" class="btn btn-info mt-2" onclick="toggleDels()">
+        <button type="button" id="reading-toggle" class="btn btn-info mt-2" onclick="toggleReadingText()">
+          View reading text
+        </button>
+        <button type="button" id="deleting-toggle" class="btn btn-info mt-2" onclick="toggleDels()">
           Show/Hide Deletions
         </button>
-        <button type="button" class="btn btn-secondary mt-2" onclick="toggleMetamarks()">
+        <button type="button" id="metamark-toggle" class="btn btn-secondary mt-2" onclick="toggleMetamarks()">
           Show/Hide Metamarks
         </button>
       </div>

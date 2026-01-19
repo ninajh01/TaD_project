@@ -141,4 +141,13 @@ function documentLoader() {
     console.log("Metamarks toggled");
 }
 
+  function toggleReadingText() {
+    document.body.classList.toggle("reading-mode")
+    const btn = document.getElementById("reading-toggle")
+    if (document.body.classList.contains("reading-mode")) {
+      btn.innerText = "View manuscript";
+    } else {
+        btn.innerText = "View reading text"
+    }  
+    }
 // EXTRA: write a function that will display the text as a reading text by clicking on a button or another dropdown list, meaning that all the deletions are removed and that the additions are shown inline (not in superscript)
